@@ -4,7 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>STOP THE FOLLOW</title>
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color"
+    content="#000000">
   <link rel="stylesheet" href="style.css">
   <!-- CDN libraries -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
@@ -44,5 +46,11 @@
 
   <!-- Resources page (hidden, but included as separate file in the bundle) -->
   <script src="script.js"></script>
+  <script>
+  if ('serviceWorker' in navigator) {
+  
+  navigator.serviceWorker.register('/service-worker.js').catch(console.error);
+    }
+  </script>
 </body>
 </html>
