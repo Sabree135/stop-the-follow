@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>STOP THE FOLLOW</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <!-- CDN libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>STOP THE FOLLOW</h1>
+      <p class="sub">Quick yes/no stalking assessment</p>
+    </header>
+
+    <section id="questions"></section>
+
+    <div id="result" class="hidden">
+      <h2>Risk Level: <span id="riskLevel"></span></h2>
+      <p id="riskExplanation"></p>
+      <div class="actions">
+        <button id="downloadPdfBtn">Download PDF</button>
+        <button id="downloadTextBtn">Download Text</button>
+        <button id="deleteBtn">Delete Results</button>
+        <button id="saveLocalBtn">Save Locally</button>
+      </div>
+      <div class="share-row">
+        <label for="alias">Alias (watermark):</label>
+        <input id="alias" placeholder="optional alias for watermark">
+      </div>
+    </div>
+
+    <div class="footer">
+      <button id="quickExit">Quick Exit</button>
+      <p class="small">Created by STOP THE FOLLOW LEGAL SOLUTIONS</p>
+      <p class="small"><a href="resources.html" id="resourcesLink">Resources & Help</a></p>
+    </div>
+  </main>
+
+  <!-- Resources page (hidden, but included as separate file in the bundle) -->
+  <script src="script.js"></script>
+</body>
+</html>
